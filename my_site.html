@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Мій сайт</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+    />
+    <link rel="stylesheet" href="my_site_css.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Створення сучасних сайтів та веб-рішень</h1>
+      <p>
+        Телефон: <a href="tel:+380982243655">+380982243655</a> | Telegram:
+        <a href="https://t.me/VG12244" target="_blank" rel="noopener noreferrer"
+          >@VG12244</a
+        >
+      </p>
+    </header>
+
+    <main class="profile">
+      <div class="photo">
+        <img src="./my_site_img/my_photo.png" alt="Моє фото" />
+      </div>
+      <div class="bio">
+        <h2>Про мене</h2>
+        <p>
+          Ласкаво прошу на мій особистий сайт. Мене звати Валерій Гордієць
+          Олексійович. Я навчаюся на 3-му курсі за спеціальністю АКІТР-23-1 у
+          ХНУ. Займаюся розробкою програмного забезпечення та вебсайтів,
+          використовуючи HTML, CSS, JavaScript.
+        </p>
+      </div>
+    </main>
+    <div class="projects">
+      <a
+        class="button-link"
+        href="file:///D:/Asiblime/save/homework%236/homework%236.html"
+      >
+        <img src="./my_site_img/example1.png" class="resize" />
+        <p>посилання на проект webstudio</p>
+      </a>
+      <a
+        class="button-link1"
+        href="file:///D:/Asiblime/save/shop/shop%20main.html"
+      >
+        <img src="./my_site_img/example2.png" class="resize" />
+        <p>посилання на проект магазину продуктів</p>
+      </a>
+    </div>
+
+    <div class="price-calculator">
+      <h2>Калькулятор вартості сайту</h2>
+
+      <label
+        >Тип сайту:
+        <select id="siteType">
+          <option value="4000">Лендинг (4000 грн)</option>
+          <option value="7000">Візитка (7000 грн)</option>
+        </select>
+      </label>
+
+      <label
+        >Кількість мов:
+        <select id="languages">
+          <option value="0">1 (0 грн)</option>
+          <option value="800">2 (800 грн)</option>
+          <option value="1500">3 (1500 грн)</option>
+        </select>
+      </label>
+
+      <label
+        >Анімації:
+        <select id="animations">
+          <option value="0">Немає (0 грн)</option>
+          <option value="800">Базові (800 грн)</option>
+          <option value="2000">Складні (2000 грн)</option>
+        </select>
+      </label>
+
+      <label
+        >Дизайн:
+        <select id="design">
+          <option value="0">Готовий шаблон (0 грн)</option>
+          <option value="1000">Індивідуальний (1000 грн)</option>
+        </select>
+      </label>
+
+      <label
+        >Розширена SEO оптимізація:
+        <select id="seo">
+          <option value="0">Ні (0 грн)</option>
+          <option value="900">Так (900 грн)</option>
+        </select>
+      </label>
+
+      <label
+        >Терміновість:
+        <select id="urgency">
+          <option value="1">Стандартний термін</option>
+          <option value="1.3">Терміново (націнка 30%)</option>
+        </select>
+      </label>
+
+      <button onclick="calculatePrice()">Розрахувати</button>
+      <div class="result" id="result"></div>
+    </div>
+
+    <script>
+      function calculatePrice() {
+        let siteType = parseInt(document.getElementById("siteType").value);
+        let languages = parseInt(document.getElementById("languages").value);
+        let animations = parseInt(document.getElementById("animations").value);
+        let design = parseInt(document.getElementById("design").value);
+        let seo = parseInt(document.getElementById("seo").value);
+        let urgency = parseFloat(document.getElementById("urgency").value);
+
+        let total = siteType + languages + animations + design + seo;
+        total = total * urgency;
+
+        document.getElementById(
+          "result"
+        ).innerText = `Орієнтовна вартість: ${total} грн`;
+      }
+    </script>
+
+    <footer>
+      <p>&copy; 2025 Мій сайт</p>
+      <p>
+        Телефон: <a href="tel:+380982243655">+380982243655</a> | Telegram:
+        <a href="https://t.me/VG12244" target="_blank" rel="noopener noreferrer"
+          >@VG12244</a
+        >
+      </p>
+    </footer>
+  </body>
+</html>
