@@ -108,6 +108,8 @@ ul li {
   align-items: flex-start;
   padding: 20px;
   gap: 20px;
+  max-width: 900px; /* Задаємо максимальну ширину, наприклад 800px */
+  margin: 0 auto; /* Центруємо блок по горизонталі */
 }
 
 .photo {
@@ -123,6 +125,16 @@ ul li {
 
 .bio {
   flex: 1;
+}
+.bio h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: green;
+}
+
+.bio p {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
 }
 
 .button-link {
@@ -163,6 +175,7 @@ ul li {
 .projects {
   display: flex;
   gap: 20px; /* відступ між посиланнями */
+  margin: 10px;
 }
 
 .button-link,

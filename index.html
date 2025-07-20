@@ -12,9 +12,22 @@
   </head>
   <body>
     <header>
-      <h1>Створення сучасних сайтів та веб-рішень</h1>
+      <div
+        class="lang-select"
+        style="position: absolute; top: 10px; right: 20px"
+      >
+        <label for="language-select"></label>
+        <select id="language-select" onchange="changeLanguage()">
+          <option value="uk">Українська</option>
+          <option value="ru">Русский</option>
+          <option value="en">English</option>
+        </select>
+      </div>
+      <h1 data-i18n="header-title">Створення сучасних сайтів та веб-рішень</h1>
       <p>
-        Телефон: <a href="tel:+380982243655">+380982243655</a> | Telegram:
+        <span data-i18n="contact-phone">Телефон:</span>
+        <a href="tel:+380982243655">+380982243655</a> |
+        <span data-i18n="contact-telegram">Telegram:</span>
         <a href="https://t.me/VG12244" target="_blank" rel="noopener noreferrer"
           >@VG12244</a
         >
@@ -26,30 +39,30 @@
         <img src="./my_site_img/my_photo.png" alt="Моє фото" />
       </div>
       <div class="bio">
-        <h2>Про мене</h2>
-        <p>
+        <h1 data-i18n="about-me-title">Про мене</h1>
+        <p data-i18n="about-me-text">
           Ласкаво прошу на мій особистий сайт. Мене звати Валерій Гордієць
-          Олексійович. Я навчаюся на 3-му курсі за спеціальністю АКІТР-23-1 у
-          ХНУ. Займаюся розробкою програмного забезпечення та вебсайтів,
-          використовуючи HTML, CSS, JavaScript.
+          Олексійович. Я навчаюся на 3-му курсі за спеціальністю АКІТР у ХНУ.
+          Займаюся розробкою програмного забезпечення та вебсайтів,
+          використовуючи HTML, CSS та JavaScript.
         </p>
       </div>
     </main>
+
     <div class="about-me-section">
       <div class="text-content">
-        <h1>Чому вам варто вибрати мене</h1>
+        <h1 data-i18n="why-choose-me">Чому вам варто вибрати мене</h1>
         <ul>
-          <li><a>Низька ціна, лендинг від 4000 грн</a></li>
-          <li>
-            <a>Використання сучасних технологій: HTML, CSS, JavaScript</a>
+          <li data-i18n="advantage-1">Низька ціна, лендинг від 4000 грн</li>
+          <li data-i18n="advantage-2">
+            Використання сучасних технологій: HTML, CSS, JavaScript
           </li>
-
-          <li>
-            <a>Висока швидкість, сайт буде створено менше ніж за тиждень</a>
+          <li data-i18n="advantage-3">
+            Висока швидкість, сайт буде створено менше ніж за тиждень
           </li>
-          <li><a>Активна співпраця з замовником</a></li>
-          <li>
-            <a>Особлива можливість поповнити портфоліо молодого фронтендера</a>
+          <li data-i18n="advantage-4">Активна співпраця з замовником</li>
+          <li data-i18n="advantage-5">
+            Особлива можливість поповнити портфоліо молодого фронтендера
           </li>
         </ul>
       </div>
@@ -57,103 +70,76 @@
         <img src="./my_site_img/photo2.jpg" alt="Фото 2" />
       </div>
     </div>
-    <h1 class="projects-title">Мої проекти</h1>
+
+    <h1 class="projects-title" data-i18n="projects-title">Мої проекти</h1>
     <div class="projects">
-      <a
-        class="button-link"
-        href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"
-      >
+      <a class="button-link" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
         <img src="./my_site_img/example1.png" class="resize" />
-        <p>посилання на проект webstudio</p>
+        <p data-i18n="project-1">посилання на проект webstudio</p>
       </a>
       <a
         class="button-link1"
-        href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"
+        href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
       >
         <img src="./my_site_img/example2.png" class="resize" />
-        <p>посилання на проект магазину продуктів</p>
+        <p data-i18n="project-2">посилання на проект магазину продуктів</p>
       </a>
     </div>
 
     <div class="price-calculator">
       <h2>Калькулятор вартості сайту</h2>
+      <label for="siteType">Тип сайту:</label>
+      <select id="siteType">
+        <option value="4000">Лендинг</option>
+        <option value="6500">Сайт-візитка</option>
+      </select>
 
-      <label
-        >Тип сайту:
-        <select id="siteType">
-          <option value="4000">Лендинг (4000 грн)</option>
-          <option value="7000">Візитка (6500 грн)</option>
-        </select>
-      </label>
+      <label for="languages">Кількість мов:</label>
+      <select id="languages">
+        <option value="0">1 мова</option>
+        <option value="1000">2 мови</option>
+        <option value="2000">3 мови</option>
+      </select>
 
-      <label
-        >Кількість мов:
-        <select id="languages">
-          <option value="0">1 (0 грн)</option>
-          <option value="800">2 (800 грн)</option>
-          <option value="1500">3 (1500 грн)</option>
-        </select>
-      </label>
+      <label for="animations">Анімації:</label>
+      <select id="animations">
+        <option value="0">Немає</option>
+        <option value="500">Прості</option>
+        <option value="1300">Складні</option>
+      </select>
 
-      <label
-        >Анімації:
-        <select id="animations">
-          <option value="0">Немає (0 грн)</option>
-          <option value="800">Базові (800 грн)</option>
-          <option value="2000">Складні (2000 грн)</option>
-        </select>
-      </label>
+      <label for="design">Дизайн:</label>
+      <select id="design">
+        <option value="0">Шаблон</option>
+        <option value="2000">Індивідуальний</option>
+      </select>
 
-      <label
-        >Дизайн:
-        <select id="design">
-          <option value="0">Готовий шаблон (0 грн)</option>
-          <option value="1000">Індивідуальний (1000 грн)</option>
-        </select>
-      </label>
+      <label for="seo">SEO оптимізація:</label>
+      <select id="seo">
+        <option value="0">Ні</option>
+        <option value="1200">Так</option>
+      </select>
 
-      <label
-        >Розширена SEO оптимізація:
-        <select id="seo">
-          <option value="0">Ні (0 грн)</option>
-          <option value="900">Так (900 грн)</option>
-        </select>
-      </label>
-
-      <label
-        >Терміновість:
-        <select id="urgency">
-          <option value="1">Стандартний термін</option>
-          <option value="1.3">Терміново (націнка 30%)</option>
-        </select>
-      </label>
-
-      <button onclick="calculatePrice()">Розрахувати</button>
-      <div class="result" id="result"></div>
+      <label for="urgency">Терміновість:</label>
+      <select id="urgency">
+        <option value="1">Стандартний (1х)</option>
+        <option value="1.2">Швидкий (1.2х)</option>
+        <option value="1.5">Терміновий (1.5х)</option>
+        <option value="2">Надзвичайний (2х)</option>
+      </select>
+      <button id="calculate-button">Розрахувати</button>
+      <div id="result" class="result"></div>
     </div>
 
-    <script>
-      function calculatePrice() {
-        let siteType = parseInt(document.getElementById("siteType").value);
-        let languages = parseInt(document.getElementById("languages").value);
-        let animations = parseInt(document.getElementById("animations").value);
-        let design = parseInt(document.getElementById("design").value);
-        let seo = parseInt(document.getElementById("seo").value);
-        let urgency = parseFloat(document.getElementById("urgency").value);
-
-        let total = siteType + languages + animations + design + seo;
-        total = total * urgency;
-
-        document.getElementById(
-          "result"
-        ).innerText = `Орієнтовна вартість: ${total} грн`;
-      }
-    </script>
+    <script src="calculator.js"></script>
+    <script src="lang.js"></script>
 
     <footer>
-      <p>&copy; 2025 Мій сайт</p>
+      <p>&copy; 2025 <span data-i18n="footer-site">Мій сайт</span></p>
       <p>
-        Телефон: <a href="tel:+380982243655">+380982243655</a> | Telegram:
+        <span data-i18n="contact-phone">Телефон:</span>
+        <a href="tel:+380982243655">+380982243655</a> |
+        <span data-i18n="contact-telegram">Telegram:</span>
         <a href="https://t.me/VG12244" target="_blank" rel="noopener noreferrer"
           >@VG12244</a
         >
