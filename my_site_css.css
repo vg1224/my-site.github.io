@@ -36,6 +36,31 @@ main.profile {
   border-radius: 100%;
   display: block;
 }
+.about-me-section {
+  margin-left: 20px;
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: green;
+}
+ul li {
+  margin-bottom: 10px; /* Додає 10px відстані знизу кожного елемента списку */
+}
+.about-me-section {
+  display: flex; /* Вмикає Flexbox для контейнера */
+  align-items: center; /* Вирівнює елементи (текст і зображення) по центру по вертикалі */
+  justify-content: space-between; /* Розподіляє простір між елементами. Можна також використати 'flex-start' якщо зображення має бути близько до тексту. */
+  gap: 20px; /* Додає відстань між елементами */
+}
+
+/* Налаштування для текстового контенту */
+.text-content {
+  flex: 1; /* Дозволяє блоку з текстом займати весь доступний простір */
+}
+
+/* Налаштування для фото */
+.photo2 {
+  flex-shrink: 0; /* Забороняє зменшення розміру зображення */
+}
 
 .photo::after {
   content: "";
@@ -54,6 +79,12 @@ main.profile {
 
 .bio {
   flex: 2 1 500px;
+}
+.projects-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: green;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
