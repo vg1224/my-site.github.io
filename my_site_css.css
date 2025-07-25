@@ -80,6 +80,12 @@ ul li {
 .bio {
   flex: 2 1 500px;
 }
+.bio h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: green;
+}
+
 .projects-title {
   font-size: 24px;
   margin-bottom: 20px;
